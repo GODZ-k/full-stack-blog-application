@@ -367,7 +367,7 @@ const updateUserPassword = async(req,res)=>{
         })
     }
 }
-
+// PENDING --- forget password 
 const forgetPassword =  async(req,res)=>{
     try {
         const inputData = req.body
@@ -401,7 +401,7 @@ const forgetPassword =  async(req,res)=>{
                 msg:"Failed to send mail"
             })
           }
-          
+
     } catch (error) {
         return res.status(500).json({
             msg:"Internal server error"
