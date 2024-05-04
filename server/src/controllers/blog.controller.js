@@ -51,6 +51,8 @@ const createBlog = async (req, res) => {
     }
 }
 
+
+
 const upadateBlog = async (req, res) => {
     try {
         const inputData = req.body
@@ -110,6 +112,8 @@ const upadateBlog = async (req, res) => {
         })
     }
 }
+
+
 export {
     createBlog,
     upadateBlog

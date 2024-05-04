@@ -37,6 +37,15 @@ const forgetUserType = zod.object({
     email:zod.string().email()
 })
 
+const verifyOtpType = zod.object({
+    otp:zod.string().length(6)
+})
+
+const createNewPasswordType = zod.object({
+    newPassword:zod.string().min(8),
+    confirmPassword:zod.string().min(8)
+
+})
 
 // blog types -------------
 
@@ -60,5 +69,7 @@ export {
     loginUserType,
     updateProfileType,
     updatePasswordType,
-    forgetUserType
+    forgetUserType,
+    verifyOtpType,
+    createNewPasswordType
 }
