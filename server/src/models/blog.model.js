@@ -1,4 +1,5 @@
 import mongoose, { model , Schema} from "mongoose";
+import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 import slugify  from "slugify"
 
 const blogSchema = new Schema({
@@ -36,6 +37,7 @@ blogSchema.pre("save" , async function(next){
     next()
 })
 
+blogSchema.plugin(mongooseAggregatePaginate)
 
 const Blog = model("Blog", blogSchema)
 

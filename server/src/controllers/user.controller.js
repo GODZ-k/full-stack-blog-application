@@ -38,7 +38,7 @@ const registerUser = async (req, res) => {
             email,
             firstName,
             lastName,
-            password
+            password,
         })
 
         if (!user) {
@@ -52,6 +52,7 @@ const registerUser = async (req, res) => {
         })
 
     } catch (error) {
+        console.log(error)
         return res.status(500).json({
             msg: "Internal server error"
         })
@@ -526,6 +527,26 @@ const refreshToken = async (req, res) => {
     }
 }
 
+// PENDING
+const userProfile = async (req,res)=>{
+    try {
+        const username  = req.params.username
+
+        if(!username || !username.trim()){
+            return res.status(400).json({
+                msg:"Invalid request"
+            })
+        }
+
+        const profile = await User.aggregate([
+
+        ])
+    } catch (error) {
+        return res.status(500).json({
+            msg:"Internal server error"
+        })
+    }
+}
 
 export {
     registerUser,

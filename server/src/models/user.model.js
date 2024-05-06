@@ -24,15 +24,16 @@ const userSchema = new Schema({
         type: String,
         unique: true,
         trim: true,
-        lowerCase: true
+        lowerCase: true,
+        required:true
     },
     verificationToken: {
         type: String
     },
-    phone: {
-        type: String,
-        unique: true
-    },
+    // phone: {
+    //     type: String,
+    //     required:true
+    // },
     avatar: {
         type: String,
     },

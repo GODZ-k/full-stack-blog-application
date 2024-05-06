@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
-import { verifyOtpType } from "../utils/Types"
-import User from "../models/user.model"
+import { verifyOtpType } from "../utils/Types.js"
+import User from "../models/user.model.js"
 
 
 const veriftJWT = async (req, res, next) => {
