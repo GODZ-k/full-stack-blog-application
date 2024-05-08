@@ -17,6 +17,8 @@ const registerUser = async (req, res) => {
 
         const payloadData = registerUserType.safeParse(inputData)
 
+        console.log(payloadData)
+        
         if (!payloadData.success) {
             return res.status(400).json({
                 msg: "Please enter valid input"

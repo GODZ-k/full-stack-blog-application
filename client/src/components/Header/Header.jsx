@@ -16,12 +16,12 @@ function Header() {
           </ul>
         </div>
         <div>
-          <Link className="px-5 border-gray-900 border mr-3 py-1.5" to="/user/login">
+          {/* <Link className="px-5 border-gray-900 border mr-3 py-1.5" to="/user/login">
             Sign in
           </Link>
           <Link className="bg-gray-900 text-white px-5 py-2 rounded-sm" to="/user/signup">
             Get started
-          </Link>
+          </Link> */}
         </div>
       </div>
     </>
